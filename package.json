@@ -1,0 +1,19 @@
+{
+  "name": "ticket-submitter",
+  "version": "1.0.0",
+  "description": "Pair final project for Hacktiv8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adithwip/ticket-submitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adithwip/ticket-submitter/issues"
+  },
+  "homepage": "https://github.com/adithwip/ticket-submitter#readme"
+}
