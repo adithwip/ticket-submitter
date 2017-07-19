@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/adithwip/ticket-submitter/issues"
   },
-  "homepage": "https://github.com/adithwip/ticket-submitter#readme"
+  "homepage": "https://github.com/adithwip/ticket-submitter#readme",
+  "dependencies": {
+    "pg": "^6.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.3.2",
+    "sequelize-cli": "^2.7.0"
+  }
 }
