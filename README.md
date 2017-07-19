@@ -4,6 +4,8 @@ Pair final project for Hacktiv8
 ## Steps
 Saat inisialisasi project pertama kali, lakukan npm init. 
 
+Nama database local: ticketsubmitter
+
 Di pair project ini, npm yang harus diinstall adalah:
 1. sequelize
 2. sequelize-cli
