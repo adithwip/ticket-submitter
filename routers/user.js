@@ -66,11 +66,36 @@ router.get('/:id/:id2/view-conversations', function (req, res) {
     where: {
       UserId: req.params.id
     },
-    include: [{ all: true}]
+    include: [{ all: true}],
+    order: [['Messages', 'createdAt', 'ASC']]
   })
   .then(result => {
     // res.send(result.Messages.Messages.message)
     res.render('conversations', {data: result})
+  })
+})
+
+router.post('/:id/:id2/view-conversations', function (req, res) {
+  db.Message.create({
+    message: req.body.message,
+    from:1,
+    TicketId: req.params.id2
+  })
+  .then(result => {
+    res.redirect(`/home/${req.params.id}/${req.params.id2}/view-conversations`)
+  })
+})
+
+router.get('/:id/:id2/close', function (req, res) {
+  db.Ticket.update({
+    close_status: 2
+  },{
+    where: {
+      id: req.params.id2
+    }
+  })
+  .then(() => {
+    res.redirect(`/home/${req.params.id}/`)
   })
 })
 

@@ -15,21 +15,21 @@ module.exports = {
     return queryInterface.bulkInsert('Departements', [{
       name: 'General Support',
       username: 'general',
-      password: 'general',
+      password: '62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     },{
       name: 'Billing Support',
       username: 'billing',
-      password: 'billing',
+      password: '62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     },{
       name: 'Technical Support',
       username: 'technical',
-      password: 'technical',
+      password: '62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()

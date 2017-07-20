@@ -38,20 +38,15 @@
             </blockquote>
           </div>
           <center>
-          <form class="form-inline" action="/home/<%= data[0].UserId %>/<%= data[0].id %>/view-conversations" method="post">
-            <input type="text" name="message" class="form-control"> &nbsp; <button type="submit" name="button" class="btn btn-success">Reply</button>
+          <form class="form-inline" action="/staff/<%= data[0].DepartementId %>/<%= data[0].id %>/view-conversations" method="post">
+            <input type="text" name="message" class="form-control"> &nbsp; <button type="submit" name="button" class="btn btn-success">Respond!</button>
           </form>
         </center><br>
 
+
+
+
           <!-- conversations start here -->
-          <!-- <% for(let i = 0; i < data[0].Messages.length; i++) { %>
-          <% if(data[0].Messages[i].from === 1){ %>
-            <div class="alert alert-success"><%= data[0].Messages[i].message %></div>
-          <% } else {%>
-            <div class="alert alert-warning"><%= data[0].Messages[i].message %></div>
-          <% }} %> -->
-
-
           <% for(let i = 0; i < data[0].Messages.length; i++) { %>
           <% if(data[0].Messages[i].from === 1){ %>
             <div class="alert " style="background-color:#ACF0F2"> <span style="font-size:20px"><%= data[0].Messages[i].message %> </span><br>by:<%= data[0].User.username%></div>
