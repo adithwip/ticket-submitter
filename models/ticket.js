@@ -6,12 +6,13 @@ module.exports = function(sequelize, DataTypes) {
     close_status: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER,
     DepartementId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+  Ticket.associate = (models) => {
+    Ticket.belongsTo(models.Departement)
+    Ticket.belongsTo(models.User)
+    Ticket.hasMany(models.Message)
+  }
+
+
   return Ticket;
 };

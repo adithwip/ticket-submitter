@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
   var Message = sequelize.define('Message', {
     message: DataTypes.STRING,
     from: DataTypes.INTEGER,
-    TicketId: DataTypes.STRING
+    TicketId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
@@ -11,5 +11,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+  Message.associate = (models) => {
+    Message.belongsTo(models.Ticket)
+  }
   return Message;
 };

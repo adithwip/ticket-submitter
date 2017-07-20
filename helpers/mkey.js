@@ -3,7 +3,7 @@ module.exports = function() {
   result = []
     for(let i = 0; i < 8; i++){
       let x = Math.floor(Math.random()*36);
-      
+
       result.push(source.charAt(x))
 
     }

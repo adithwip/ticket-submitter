@@ -20,10 +20,12 @@ router.get('/:id', function (req, res) {
   db.Ticket.findAll({
     where: {
       UserId: req.params.id
-    }
+    },
+    include: [{ all: true}]
   })
   .then(result => {
-    console.log('result')
+    // console.log('result')
+    // res.send(result)
     res.render('home', {dataTiket: result})
   })
 })
@@ -50,12 +52,26 @@ router.post('/:id/open-ticket', function (req, res) {
     db.Message.create({
       message: req.body.message,
       from: 1,
-      TicketId: noticket
+      TicketId: rows.id
     })
     .then(() => {
       res.redirect(`/home/${req.params.id}`)
     })
 })
+})
+
+
+router.get('/:id/:id2/view-conversations', function (req, res) {
+  db.Ticket.findAll({
+    where: {
+      UserId: req.params.id
+    },
+    include: [{ all: true}]
+  })
+  .then(result => {
+    // res.send(result.Messages.Messages.message)
+    res.render('conversations', {data: result})
+  })
 })
 
 module.exports = router
