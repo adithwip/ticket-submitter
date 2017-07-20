@@ -14,15 +14,15 @@ module.exports = {
     */
 
     return queryInterface.bulkInsert('Messages', [{
-      messages: 'Halo apa kabar?',
+      message: 'Halo apa kabar?',
       from: 1,
       TicketId:1,
       createdAt: new Date(),
       updatedAt: new Date()
     },{
-      messages: 'Ada yang bisa kami bantu?',
+      message: 'Ada yang bisa kami bantu?',
       from: 2,
-      TicketId:1
+      TicketId:1,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
