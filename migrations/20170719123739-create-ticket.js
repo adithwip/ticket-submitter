@@ -20,7 +20,7 @@ module.exports = {
       UserId: {
         type: Sequelize.INTEGER
       },
-      DepartmentId: {
+      DepartementId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
