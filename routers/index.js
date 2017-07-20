@@ -56,7 +56,17 @@ router.post('/signup', function (req, res) {
     updatedAt: new Date()
   })
   .then(result => {
-    res.redirect('/login')
+    let noticket = mkey()
+    db.Ticket.create({
+      ticket: noticket,
+      title: "it's your first ticket",
+      close_status: 2,
+      UserId: result.id,
+      DepartementId: 1
+    })
+    .then(() => {
+      res.redirect('/login')
+    })
   })
 })
 
