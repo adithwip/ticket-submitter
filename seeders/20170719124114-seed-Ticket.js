@@ -11,24 +11,25 @@ module.exports = {
         name: 'John Doe',
         isBetaMember: false
       }], {});
+      return queryInterface.bulkInsert('Tickets', [{
+          ticket: 'aRe231',
+          title: 'router gak bisa konek',
+          close_status: 1,
+          UserId: 1,
+          DepartementId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }, {
+          ticket: 'akKe4k',
+          title: 'modem macet',
+          close_status: 1,
+          UserId: 2,
+          DepartementId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }], {});
     */
-    return queryInterface.bulkInsert('Tickets', [{
-        ticket: 'aRe231',
-        title: 'router gak bisa konek',
-        close_status: 1,
-        UserId: 1,
-        DepartementId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }, {
-        ticket: 'akKe4k',
-        title: 'modem macet',
-        close_status: 1,
-        UserId: 2,
-        DepartementId: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }], {});
+
   },
 
   down: function (queryInterface, Sequelize) {
