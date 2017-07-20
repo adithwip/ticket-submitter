@@ -16,7 +16,7 @@ module.exports = {
         fullname: 'John Doe',
         email: 'johndoe@gmail.com',
         address: 'jl. doe john No. 70',
-        phone: 0989999,
+        phone: 989999,
         UserId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -24,7 +24,7 @@ module.exports = {
         fullname: 'Jane Doe',
         email: 'janedoe@gmail.com',
         address: 'jl. doe jane No. 50',
-        phone: 0985555,
+        phone: 985555,
         UserId: 2,
         createdAt: new Date(),
         updatedAt: new Date()

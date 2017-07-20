@@ -12,24 +12,24 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Departments', [{
+    return queryInterface.bulkInsert('Departements', [{
       name: 'General Support',
       username: 'general',
-      password: 'general'
+      password: 'general',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     },{
       name: 'Billing Support',
-      username: 'general',
-      password: 'general'
+      username: 'billing',
+      password: 'billing',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     },{
       name: 'Technical Support',
-      username: 'general',
-      password: 'general'
+      username: 'technical',
+      password: 'technical',
       RoleId: 2,
       createdAt: new Date(),
       updatedAt: new Date()

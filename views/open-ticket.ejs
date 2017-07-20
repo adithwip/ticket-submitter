@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <%- include layout/head %>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <center>
+            <h1>Welcome to Ticket Submitter</h1><br>
+            <a href="#"><button type="button" class="btn btn-primary" name="button">Home</button></a><br><br>
+            <!-- <a href="/home/open-ticket"><button type="button" class="btn btn-warning" name="button">Open New Ticket</button></a><br><br> -->
+          <table class="table">
+            <tr>
+              <td align="center"><span>Kami sangat senang jika Anda membaca knowledgebase kami. <br>
+                Pertanyaan yang akan anda ajukan mungkin telah terjawab di knowledgebase kami,
+                jika belum hubungi kami melalui form berikut!</span><br><br>
+                <form class="form-inline" action="" method="post">
+                  <label for="support"></label>
+                  <select class="form-control" name="ids">
+                    <% support.forEach(getSupport => { %>
+                      <option value="<%= getSupport.id %>"><%= getSupport.name %></option>
+                    <% }) %>
+                  </select><br><br>
+                  <label>Message Title</label><br>
+                  <input type="text" name="title" class="form-control"><br>
+                  <label>Type Your Question</label><br>
+                  <input type="text" name="title" class="form-control"><br>
+
+                  <br>
+                  <button type="submit" name="button" class="btn btn-success">Send Ticket</button>
+                </form>
+              </td>
+            </tr>
+
+
+          </table>
+          </center>
+
+        </div>
+      </div>
+    </div>
+    <%- include layout/footer%>
+
+  </body>
+</html>

@@ -15,7 +15,7 @@ module.exports = {
     return queryInterface.bulkInsert('Tickets', [{
         ticket: 'aRe231',
         title: 'router gak bisa konek',
-        close_status: 0,
+        close_status: 1,
         UserId: 1,
         DepartmentId: 1,
         createdAt: new Date(),
@@ -23,7 +23,7 @@ module.exports = {
       }, {
         ticket: 'akKe4k',
         title: 'modem macet',
-        close_status: 0,
+        close_status: 1,
         UserId: 2,
         DepartmentId: 1,
         createdAt: new Date(),
