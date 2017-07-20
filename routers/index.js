@@ -35,10 +35,10 @@ router.post('/login', function(req, res, next){
       //   req.session.authority = 1;
       // }
       res.redirect(`/home/${result.id}`)
-    } else {
-      res.render('login', {err: `${req.body.username} atau password tidak dikenal`})
+    // } else {
+    //   res.render('login', {err: `${req.body.username} atau password tidak dikenal`})
     }
-
+    res.render('login', {err: `${req.body.username} atau password tidak dikenal`})
   })
 })
 

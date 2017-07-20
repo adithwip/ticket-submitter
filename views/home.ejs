@@ -35,8 +35,9 @@
                 <td><%= i %><% i += 1 %></td>
                 <td><%= getTiket.ticket %></td>
                 <td><%= getTiket.title %></td>
+                <td><%= getTiket.Departement.name %></td>
                 <td>
-                  <a href="#"><button type="button" class="btn btn-success" name="button">Open Ticket</button></a>
+                  <a href="/home/<%= getTiket.UserId %>/<%= getTiket.id %>/view-conversations"><button type="button" class="btn btn-success" name="button">Open Ticket</button></a>
                   <a href="#"><button type="button" class="btn btn-danger" name="button">Close Ticket</button></a>
                 </td>
               </tr>

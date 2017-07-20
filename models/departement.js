@@ -5,12 +5,10 @@ module.exports = function(sequelize, DataTypes) {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     RoleId: DataTypes.INTEGER
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  Departement.associate = (models) => {
+    Departement.belongsToMany(models.User, { through: 'Tickets' })
+  }
   return Departement;
 };

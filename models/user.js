@@ -15,12 +15,16 @@ module.exports = function(sequelize, DataTypes) {
         models.secret = sec
       },
       beforeUpdate: models => {
-        let sec =  mkey().toString();
+        let sec =  'final'
         let pass = encryptpass(models.password, sec)
-        models.password = 'final'
+        models.password = pass
         models.secret = sec
       }
     }
   });
+
+  User.associate = (models) => {
+    User.belongsToMany(models.Departement, { through: 'Tickets' })
+  }
   return User;
 };
