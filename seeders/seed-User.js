@@ -13,14 +13,20 @@ module.exports = {
       }], {});
     */
     return queryInterface.bulkInsert('Users', [{
-        username: 'johndoe',
-        password: '1234',
+        username: 'achim',
+        password: "pass",
         RoleId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
-        username: 'janedoe',
-        password: '12345',
+        username: 'adith',
+        password: "pass",
+        RoleId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }, {
+        username: 'dayat',
+        password: "pass",
         RoleId: 1,
         createdAt: new Date(),
         updatedAt: new Date()

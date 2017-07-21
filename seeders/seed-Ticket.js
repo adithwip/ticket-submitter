@@ -11,23 +11,32 @@ module.exports = {
         name: 'John Doe',
         isBetaMember: false
       }], {});
-      return queryInterface.bulkInsert('Messages', [{
-        message: 'Halo apa kabar?',
-        from: 1,
-        TicketId:1,
+    */
+    return queryInterface.bulkInsert('Tickets', [{
+        ticket: 'aRe231',
+        title: 'Router gak bisa konek',
+        close_status: 1,
+        UserId: 1,
+        DepartmentId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
-      },{
-        message: 'Ada yang bisa kami bantu?',
-        from: 2,
-        TicketId:1,
+      }, {
+        ticket: 'akKe4k',
+        title: 'Modem macet',
+        close_status: 1,
+        UserId: 2,
+        DepartmentId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }, {
+        ticket: 'wxftn2cr',
+        title: 'Okdites lah',
+        close_status: 1,
+        UserId: 3,
+        DepartmentId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
-    */
-
-
-
   },
 
   down: function (queryInterface, Sequelize) {
@@ -38,5 +47,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
+    return queryInterface.bulkDelete('Tickets', null, {});
   }
 };

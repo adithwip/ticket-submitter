@@ -17,6 +17,7 @@
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
           <!-- <h1>Your Conversations</h1> -->
+          <center>
             <div class="container">
             <blockquote class="quote-box">
               <p class="quotation-mark">
@@ -37,6 +38,10 @@
               </div>
             </blockquote>
           </div>
+          <a href="/staff/<%= data2.DepartementId %>"><button type="button" name="button" class="btn btn-primary"> Home </button></a>
+          <a href="/staff/logout"><button type="button" name="button" class="btn btn-danger">Logout</button></a>
+          </center>
+          <br>
           <center>
           <form class="form-inline" action="/staff/<%= data2.DepartementId %>/<%= data[0].TicketId %>/view-conversations" method="post">
             <input type="text" name="message" class="form-control"> &nbsp; <button type="submit" name="button" class="btn btn-success">Respond!</button>

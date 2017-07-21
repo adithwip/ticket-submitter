@@ -35,7 +35,10 @@
               </div>
             </blockquote>
           </div>
+          <a href="/home/<%= data2.UserId %>"><button type="button" name="button" class="btn btn-primary"> Home </button></a>
+          <a href="/home/logout"><button type="button" name="button" class="btn btn-danger">Logout</button></a>
           </center>
+          <br>
           <center>
           <form class="form-inline" action="/home/<%= data2.UserId %>/<%= data[0].TicketId %>/view-conversations" method="post">
             <input type="text" name="message" class="form-control"> &nbsp; <button type="submit" name="button" class="btn btn-success btn-lg">Reply</button>

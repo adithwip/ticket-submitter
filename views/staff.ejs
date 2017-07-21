@@ -11,9 +11,10 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <center>
-            <h1>Welcome to Staff</h1><br>
+            <h1><%= dataTiket[0].Departement.name %> Page</h1><br>
             <a href="#"><button type="button" class="btn btn-primary" name="button">Home</button></a>
-            <a href="/home/<%= dataTiket[0].id %>/open-ticket"><button type="button" class="btn btn-warning" name="button">Open New Ticket</button></a><br><br>
+            <a href="/home/<%= dataTiket[0].id %>/open-ticket"><button type="button" class="btn btn-warning" name="button">Open New Ticket</button></a>
+            <a href="/staff/logout"><button type="button" name="button" class="btn btn-danger">Logout</button></a><br><br>
           <table class="table">
             <tr>
               <td align="center">
