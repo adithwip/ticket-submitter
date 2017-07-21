@@ -14,19 +14,19 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Users', [{
         username: 'achim',
-        password: "pass",
+        password: "62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba",
         RoleId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
         username: 'adith',
-        password: "pass",
+        password: "62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba",
         RoleId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
         username: 'dayat',
-        password: "pass",
+        password: "62eb55dbdeb217018b7c4b0f8fe814b21978501f2c6508002ec8b57596ba",
         RoleId: 1,
         createdAt: new Date(),
         updatedAt: new Date()

@@ -17,7 +17,7 @@ module.exports = {
         title: 'Router gak bisa konek',
         close_status: 1,
         UserId: 1,
-        DepartmentId: 1,
+        DepartementId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -25,7 +25,7 @@ module.exports = {
         title: 'Modem macet',
         close_status: 1,
         UserId: 2,
-        DepartmentId: 1,
+        DepartementId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -33,7 +33,7 @@ module.exports = {
         title: 'Okdites lah',
         close_status: 1,
         UserId: 3,
-        DepartmentId: 1,
+        DepartementId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
