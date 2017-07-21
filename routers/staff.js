@@ -8,6 +8,10 @@ router.get('/', function (req, res) {
   res.redirect('/staff/login')
 })
 
+router.get('/logout', function (req, res) {
+  res.redirect('/staff/login')
+})
+
 router.get('/login', function (req, res) {
   res.render('stafflogin', { err: false})
 })
