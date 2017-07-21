@@ -42,8 +42,12 @@
                 <td><%= getTiket.User.username %></td>
                 <% } %>
                 <td>
+                  <% if(getTiket.close_status === 1) {%>
                   <a href="/staff/<%= getTiket.DepartementId %>/<%= getTiket.id %>/view-conversations"><button type="button" class="btn btn-success" name="button">Open Ticket</button></a>
                   <a href="#"><button type="button" class="btn btn-danger" name="button">Close Ticket</button></a>
+                  <% } else { %>
+                    <button type="button" name="button" class="btn btn-default">solved!</button>
+                  <%}%>
                 </td>
               </tr>
             <% }) %>
