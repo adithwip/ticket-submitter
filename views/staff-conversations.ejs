@@ -18,7 +18,7 @@
         <div class="col-md-4 col-md-offset-4">
           <!-- <h1>Your Conversations</h1> -->
           <center>
-            <div class="container">
+
             <blockquote class="quote-box">
               <p class="quotation-mark">
                 “
@@ -37,7 +37,7 @@
 
               </div>
             </blockquote>
-          </div>
+          
           <a href="/staff/<%= data2.DepartementId %>"><button type="button" name="button" class="btn btn-primary"> Home </button></a>
           <a href="/staff/logout"><button type="button" name="button" class="btn btn-danger">Logout</button></a>
           </center>
@@ -51,7 +51,7 @@
           if(getMsg.from === 1){ %>
             <div class="alert " style="background-color:#ACF0F2"> <span style="font-size:20px"><%= getMsg.message %> </span><br>by:<%= data2.User.username%></div>
           <% } else { %>
-            <div class="alert  text-right"  style="background-color:#EB7F00"><span style="font-size:20px"><%= getMsg.message %> </span><br>by: <%= data2.Departement.name%></div>
+            <div class="alert  text-right"  style="background-color:#ffc5c5"><span style="font-size:20px"><%= getMsg.message %> </span><br>by: <%= data2.Departement.name%></div>
           <% }
         })%>
 
