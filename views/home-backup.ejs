@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <%- include layout/head %>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <center>
+            <h1>Welcome to Ticket Submitter</h1><br>
+            <a href="#"><button type="button" class="btn btn-primary" name="button">Home</button></a>
+            <a href="/home/<%= dataTiket[0].id %>/open-ticket"><button type="button" class="btn btn-warning" name="button">Open New Ticket</button></a><br><br>
+          <table class="table">
+            <tr>
+              <td align="center">
+                No
+              </td>
+              <td align="center">
+                Ticket ID
+              </td>
+              <td align="center">
+                Ticket Title
+              </td>
+              <!-- <td>Department</td> -->
+              <td align="center">
+                Action
+              </td>
+            </tr>
+            <% var i = 1; dataTiket.forEach( getTiket => { %>
+              <tr>
+                <td><%= i %><% i += 1 %></td>
+                <td><%= getTiket.ticket %></td>
+                <td><%= getTiket.title %></td>
+                <td><%= getTiket.Departement.name %></td>
+                <td class="text-center">
+                  <% if(getTiket.close_status === 1) {%>
+                  <a href="/home/<%= getTiket.UserId %>/<%= getTiket.id %>/view-conversations"><button type="button" class="btn btn-success" name="button">Open Ticket</button></a>
+                  <a href="/home/<%= getTiket.UserId %>/<%= getTiket.id %>/close"><button type="button" class="btn btn-danger" name="button">Close Ticket</button></a>
+                  <% } else { %>
+                    <button type="button" name="button" class="btn btn-default">solved!</button>
+                  <%}%>
+                </td>
+              </tr>
+            <% }) %>
+
+          </table>
+          </center>
+
+        </div>
+      </div>
+    </div>
+    <%- include layout/footer%>
+
+  </body>
+</html>

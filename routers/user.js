@@ -62,16 +62,27 @@ router.post('/:id/open-ticket', function (req, res) {
 
 
 router.get('/:id/:id2/view-conversations', function (req, res) {
-  db.Ticket.findAll({
+  db.Message.findAll({
     where: {
-      UserId: req.params.id
+      TicketId: req.params.id2
     },
-    include: [{ all: true}],
-    order: [['Messages', 'createdAt', 'ASC']]
+    // include: [{ all: true}],
+    // order: [['Messages', 'createdAt', 'ASC']]
+    order: [['createdAt', 'DESC']]
   })
   .then(result => {
+    db.Ticket.findOne({
+      where: {
+        id: req.params.id2
+      },
+      include:[{ all: true }]
+    })
+    .then(result2 => {
+      // res.send(result)
+      res.render('conversations', {data: result, data2: result2})
+    })
     // res.send(result.Messages.Messages.message)
-    res.render('conversations', {data: result})
+
   })
 })
 

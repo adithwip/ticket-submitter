@@ -23,12 +23,12 @@
                 “
               </p>
               <p class="quote-text">
-                <%= data[0].title %>
+                <%= data2.title %>
               </p>
               <hr>
               <div class="blog-post-actions"><center>
                 <p  style="font-size:16px">
-                  From : <%= data[0].User.username%>
+                  From : <%= data2.User.username%>
                 </p></center>
                 <p class="blog-post-bottom pull-right" style="font-size:12px">
                   Date : <%= data[0].createdAt %>
@@ -38,21 +38,23 @@
             </blockquote>
           </div>
           <center>
-          <form class="form-inline" action="/staff/<%= data[0].DepartementId %>/<%= data[0].id %>/view-conversations" method="post">
+          <form class="form-inline" action="/staff/<%= data2.DepartementId %>/<%= data[0].TicketId %>/view-conversations" method="post">
             <input type="text" name="message" class="form-control"> &nbsp; <button type="submit" name="button" class="btn btn-success">Respond!</button>
           </form>
         </center><br>
+        <% data.forEach(getMsg => {
+          if(getMsg.from === 1){ %>
+            <div class="alert " style="background-color:#ACF0F2"> <span style="font-size:20px"><%= getMsg.message %> </span><br>by:<%= data2.User.username%></div>
+          <% } else { %>
+            <div class="alert  text-right"  style="background-color:#EB7F00"><span style="font-size:20px"><%= getMsg.message %> </span><br>by: <%= data2.Departement.name%></div>
+          <% }
+        })%>
 
 
 
 
           <!-- conversations start here -->
-          <% for(let i = 0; i < data[0].Messages.length; i++) { %>
-          <% if(data[0].Messages[i].from === 1){ %>
-            <div class="alert " style="background-color:#ACF0F2"> <span style="font-size:20px"><%= data[0].Messages[i].message %> </span><br>by:<%= data[0].User.username%></div>
-          <% } else {%>
-            <div class="alert  text-right"  style="background-color:#EB7F00"><span style="font-size:20px"><%= data[0].Messages[i].message %> </span><br>by:<%= data[0].Departement.name%></div>
-          <% }} %>
+
         </div>
       </div>
     </div>

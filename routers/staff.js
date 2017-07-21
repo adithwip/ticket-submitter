@@ -43,21 +43,46 @@ router.get('/:id', function (req, res) {
   })
 })
 
+// router.get('/:id/:id2/view-conversations', function (req, res) {
+//   db.Ticket.findAll({
+//
+//     where: {
+//       DepartementId: req.params.id
+//     },
+//     include: [{ all: true}],
+//     order: [['Messages', 'updatedAt', 'DESC']]
+//   })
+//   .then(result => {
+//     // res.send(result.Messages.Messages.message)
+//     res.render('staff-conversations', {data: result})
+//   })
+// })
+
 router.get('/:id/:id2/view-conversations', function (req, res) {
-  db.Ticket.findAll({
-    
+  db.Message.findAll({
+
     where: {
-      DepartementId: req.params.id
+      TicketId: req.params.id2
     },
-    include: [{ all: true}],
-    order: [['Messages', 'updatedAt', 'DESC']]
+    // include: [{ all: true}],
+    // order: [['Messages', 'updatedAt', 'DESC']]
+    order: [['updatedAt', 'DESC']]
   })
   .then(result => {
+    db.Ticket.findOne({
+      where: {
+        id: req.params.id2
+      },
+      include:[{ all: true }]
+    })
+    .then(result2 => {
+      // res.send(result)
+      res.render('staff-conversations', {data: result, data2: result2})
+    })
     // res.send(result.Messages.Messages.message)
-    res.render('staff-conversations', {data: result})
+
   })
 })
-
 
 router.post('/:id/:id2/view-conversations', function (req, res) {
   db.Message.create({
